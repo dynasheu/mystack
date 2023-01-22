@@ -2,7 +2,7 @@
 
 FILE=/helpers/requiremnts_met
 if [ -f "$FILE" ]; then
-    python ./helpers/build.py
+    python3 ./helpers/build.py
 else 
     ./helpers/requirements.sh
 fi

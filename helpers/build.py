@@ -28,7 +28,6 @@ def create_folders(container):
     
     temp_folder = path.join('templates', container)
     if path.isdir(temp_folder):
-        print(temp_folder)
         dest_folder = path.join('containers', container)
         shutil.copytree(temp_folder, dest_folder, dirs_exist_ok=True)
 
