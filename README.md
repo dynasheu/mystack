@@ -2,9 +2,9 @@
 server docker stack
 
 install git using:  
-`sudo apt install git`
+`sudo apt install git`  
 and download the script:  
-`git clone https://github.com/dynasheu/mystack.git ~/mystack`
+`git clone https://github.com/dynasheu/mystack.git ~/mystack`  
 
 change default passwords in `.env` file
 
