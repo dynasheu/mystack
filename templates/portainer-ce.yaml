@@ -1,0 +1,13 @@
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./containers/portainer/data:/data
+    ports:
+      - "9000:9000"
+    restart: unless-stopped
+

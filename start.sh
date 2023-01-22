@@ -1,8 +1,10 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt install docker
-sudo apt install -y docker-compose
-sudo usermod -aG docker $USER
+FILE=/helpers/requiremnts_met
+if [ -f "$FILE" ]; then
+    python ./helpers/build.py
+else 
+    ./helpers/requirements.sh
+fi
 
-pip install pyyaml
+

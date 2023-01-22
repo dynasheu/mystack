@@ -1,0 +1,23 @@
+  grafana:
+    container_name: grafana
+    image: grafana/grafana
+    user: "0"
+    ports:
+      - "3000:3000"
+    environment:
+      - TZ=Etc/UTC
+      - GF_PATHS_DATA=/var/lib/grafana
+      - GF_PATHS_LOGS=/var/log/grafana
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USERNAME}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+    volumes:
+      - ./containers/grafana/data:/var/lib/grafana
+      - ./containers/grafana/log:/var/log/grafana
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-O", "/dev/null", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
