@@ -10,6 +10,10 @@ change default passwords in `.env` file
 
 *I am still learning. Not everything is correct yet* :smile:
 
+to do:
+- fix ports for traefik or zigbee2mqtt
+- add note: device for zigbee2mqtt should be changed if no dongle is present
+
 ## included services (exposed ports)
 - heimdall (8880, 8843)
 - portainer-ce (9000)

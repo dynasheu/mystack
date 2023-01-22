@@ -20,4 +20,7 @@ sudo apt install -y python3
 sudo apt install -y python3-pip
 pip install pyyaml
 
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+
 echo "reboot please"
