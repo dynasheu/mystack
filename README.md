@@ -1,6 +1,8 @@
 # mystack
 server docker stack
 
+`git clone https://github.com/dynasheu/mystack.git ~/mystack`
+
 change default passwords in `.env` file
 
 *I am still learning. Not everything is correct yet* :smile:
