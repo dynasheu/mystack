@@ -32,7 +32,7 @@ def create_folders(container):
         shutil.copytree(temp_folder, dest_folder, dirs_exist_ok=True)
 
 def build_docker_compose(selected_containers):
-    compose_output = '# docker-compose.yaml \nversion: \'3.9\'\n\nservices:\n'
+    compose_output = '# docker-compose.yaml \nversion: \'3.6\'\n\nservices:\n'
 
     for container in selected_containers:
         create_folders(container)
@@ -54,7 +54,6 @@ def write_selection(selected_containers):
     selected_file_name = path.join('templates', 'selected_containers')
     with open(selected_file_name, 'w') as file:
         file.writelines([f'{item}\n' for item in selected_containers])
-
 
 def main():
     print('\"docker-compose.yaml\" builder!')
@@ -85,8 +84,6 @@ def main():
         write_selection(selected_containers)
     else:
         print('\nNo container selected!')
-
-    
 
 if __name__ == '__main__':
     main()
