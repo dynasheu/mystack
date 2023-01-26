@@ -7,7 +7,7 @@
       - ZIGBEE2MQTT_CONFIG_FRONTEND=true
       - ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_SYMLINK_CURRENT=true
     ports:
-      - "8080:8080"
+      - "8099:8080"
     volumes:
       - ./containers/zigbee2mqtt/data:/app/data
     devices:
